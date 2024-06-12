@@ -32,12 +32,12 @@ def install():
                 print(k, launch.is_installed(k))
                 launch.run_pip("install "+ v, "requirements for IC-Light-SD-WebUI")
 
-        if k == 'diffusers':
-            import pkg_resources
-            version = pkg_resources.get_distribution('diffusers').version
-            if version != '0.27.2':
-                launch.run_pip("uninstall -y diffusers", "uninstalling diffusers due to version mismatch")
-                launch.run_pip("install "+"diffusers==0.27.2")
+        #if k == 'diffusers':
+            #import pkg_resources
+            #version = pkg_resources.get_distribution('diffusers').version
+            #if version != '0.27.2':
+                #launch.run_pip("uninstall -y diffusers", "uninstalling diffusers due to version mismatch")
+                #launch.run_pip("install "+"diffusers==0.27.2")
         
     
 
